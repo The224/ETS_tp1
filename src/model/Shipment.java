@@ -22,6 +22,19 @@ public class Shipment {
         this.destinationFactoryId = destinationFactoryId;
     }
 
+    public Integer travel() {
+        return travel(1);
+    }
+
+    public Integer travel(Integer distance) {
+        return this.distance += distance;
+    }
+
+    public Component getComponent() {
+        return component;
+    }
+
+
     @Override
     public String toString() {
         return "Shipment{" +

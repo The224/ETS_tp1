@@ -9,9 +9,8 @@ import java.util.ArrayList;
 
 public class FactoryController {
 
-    public static Subject<Shipment> sendingDispatcher = new Subject<>("ers");
-    public static Subject<Shipment> reicevingDispatcher = new Subject<>("tsert");
-    public static Subject<Boolean> isInProduction = new Subject<>("test");
+    public static Subject<Shipment> sendingDispatcher = new Subject<>();
+    public static Subject<Boolean> isInProduction = new Subject<>();
 
     private ArrayList<Factory> factories;
     private Warehouse warehouse;

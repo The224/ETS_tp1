@@ -5,17 +5,18 @@ import java.util.function.Function;
 
 public class Subject<T> {
 
-
-
-    private ArrayList<Function<T, Boolean>> functions = new ArrayList<>();
-
-
+    private ArrayList<Function<T, Boolean>> observersFunction = new ArrayList<>();
 
     public void emit(T value) {
-        functions.forEach( observer -> observer.apply(value) );
+        observersFunction.forEach( observer -> observer.apply(value) );
     }
 
     public void subscribe(Function fn) {
-        functions.add(fn);
+        observersFunction.add(fn);
     }
+
+    public void unsubscribeToAll() {
+        this.observersFunction.clear();
+    }
+
 }

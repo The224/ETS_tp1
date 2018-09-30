@@ -2,7 +2,8 @@ package model;
 
 import java.awt.*;
 
-public interface IDessinable {
+public interface ISimulatedObject {
 
+    void nextTurn();
     void draw(Graphics graphics);
 }

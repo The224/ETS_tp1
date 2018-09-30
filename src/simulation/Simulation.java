@@ -14,10 +14,6 @@ public class Simulation {
 	 * Cette classe représente l'application dans son ensemble.
 	 */
 	public static void main(String[] args) {
-		Road road = new Road(1,2);
-        Factory factory = new Factory(1, Component.METAL,2);
-
-        factory.shipmentReady();
 
 //		Environnement environnement = new Environnement();
 //		FenetrePrincipale fenetre = new FenetrePrincipale();
