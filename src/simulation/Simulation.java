@@ -1,6 +1,13 @@
 package simulation;
 
+import controller.FactoryController;
+import model.Component;
+import model.Road;
+import model.Shipment;
+
 public class Simulation {
+
+	private FactoryController factoryController = new FactoryController();
 
 	/**
 	 * Cette classe représente l'application dans son ensemble.
