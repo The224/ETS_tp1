@@ -1,25 +1,21 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class Subject<T> {
 
-    private String subjectId;
 
-    private ArrayList<Observer<T>> observers = new ArrayList<>();
 
-    public Subject(String subjectId) {
+    private ArrayList<Function<T, Boolean>> functions = new ArrayList<>();
 
+
+
+    public void emit(T value) {
+        functions.forEach( observer -> observer.apply(value) );
     }
 
-
-    public void emit(Consumer<? super Subject> algorithm) {
-        observers.forEach( algorithm );
-    }
-
-    public void subscribe() {
-        observers.add(algorithm);
+    public void subscribe(Function fn) {
+        functions.add(fn);
     }
 }

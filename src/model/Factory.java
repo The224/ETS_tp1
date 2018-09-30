@@ -6,11 +6,14 @@ import java.awt.*;
 
 public class Factory extends Building {
 
-    Factory(Integer id, String output, Integer productionInterval) {
+    private Boolean isInProduction = false;
+
+    public Factory(Integer id, Component output, Integer productionInterval) {
         super(id, output, productionInterval);
+        FactoryController.isInProduction.subscribe( (isInProduction) -> this.isInProduction = (Boolean)isInProduction);
     }
 
-    public void shipementReady() {
+    public void shipmentReady() {
         FactoryController.sendingDispatcher.emit(new Shipment(this.id, null, Component.METAL));
     }
 
@@ -18,8 +21,12 @@ public class Factory extends Building {
 
     }
 
-    @Override
-    public void subjectChange(String subjectId, Object newValue) {
+    public Boolean productionChange( Boolean isProductionStop) {
+
+        return true;
+    }
+
+    public void subjectChange(String subjectName, Shipment shipment) {
 
     }
 
