@@ -17,6 +17,7 @@ public class FactoryController {
 
     public FactoryController() {
         changeConfiguration("src/ressources/configuration.xml");
+        sendingDispatcher.emit(new Shipment(11, null, Component.METAL));
     }
 
     public ArrayList<ISimulatedObject> getSimulatedObjects() {
@@ -28,6 +29,7 @@ public class FactoryController {
             simulatedObjects = ConfigurationReader.createSimulationByConfiguration(configurationPath);
             return true;
         } catch (Exception e) {
+            e.printStackTrace();
             return false;
         }
     }

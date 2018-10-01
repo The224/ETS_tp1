@@ -36,11 +36,6 @@ public class ConfigurationReader {
 
         test.addAll(roads);
         test.addAll(buildings);
-
-        System.out.println(buildings.size());
-        System.out.println(roads.size());
-        System.out.println(buildings.size());
-
         return test;
     }
 
@@ -118,7 +113,6 @@ public class ConfigurationReader {
         ArrayList<BufferedImage> icons = new ArrayList<>(iconList.getLength());
         for (int i = 0; i < iconList.getLength(); i++) {
             Element icon = (Element) iconList.item(i);
-            System.out.println(icon.getAttribute("type"));
             switch (icon.getAttribute("type")) {
                 case "vide":
                     icons.add(0, ImageIO.read(new File(icon.getAttribute("path"))));

@@ -14,6 +14,7 @@ import java.util.HashMap;
 public class Factory extends Building {
 
     private Boolean isInProduction = false;
+    private Integer productionTick = 0;
 
     public Factory(
             Integer id,
@@ -34,7 +35,12 @@ public class Factory extends Building {
 
     @Override
     public void nextTurn() {
+        productionTick++;
+        if (getProductionRequirement().size() == 0 && getProductionInterval().equals(productionTick)) {
+            this.shipmentReady();
+        } else {
 
+        }
     }
 
 

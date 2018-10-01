@@ -10,13 +10,13 @@ public enum Component {
     public static String getURL(Component component) {
         switch (component){
             case METAL:
-                return "url";
+                return "src/ressources/metal.png";
             case WING:
-                return "url";
+                return "src/ressources/wing.png";
             case MOTOR:
-                return "url";
+                return "src/ressources/motor.png";
             case PLANE:
-                return "url";
+                return "src/ressources/avion.png";
         }
         return "";
     }

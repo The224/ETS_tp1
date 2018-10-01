@@ -13,6 +13,10 @@ public class Shipment {
         this.distance = 0;
     }
 
+    public Integer getDistance() {
+        return distance;
+    }
+
     public Integer getOriginFactoryId() {
         return originFactoryId;
     }
@@ -23,17 +27,13 @@ public class Shipment {
     }
 
     public Integer travel() {
-        return travel(1);
-    }
-
-    public Integer travel(Integer distance) {
-        return this.distance += distance;
+        this.distance += 1;
+        return this.distance;
     }
 
     public Component getComponent() {
         return component;
     }
-
 
     @Override
     public String toString() {

@@ -22,9 +22,10 @@ public class PanneauPrincipal extends JPanel {
 	    super.paint(g);
         this.factoryController.getSimulatedObjects().forEach( ob -> {
             try {
-               ob.draw(g);
+                ob.nextTurn();
+                ob.draw(g);
             } catch (Exception e){
-                System.out.println(e);
+                e.printStackTrace();
             }
         });
 	}

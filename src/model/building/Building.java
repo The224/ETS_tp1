@@ -42,16 +42,14 @@ public abstract class Building implements ISimulatedObject {
 
 
     public void arrival(Shipment shipment) {
-        System.out.println("Warehouse has received " + shipment.getComponent());
+        System.out.println(this.type + " has received " + shipment.getComponent());
         model.Component component = shipment.getComponent();
         Integer quantity = inventory.get(component);
-
         if ( inventory.containsKey(component)) {
             inventory.put(component, quantity + 1);
         } else {
             inventory.put(component, 1);
         }
-
     }
 
     @Override
