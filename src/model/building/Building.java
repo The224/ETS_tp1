@@ -56,11 +56,7 @@ public abstract class Building implements ISimulatedObject {
 
     @Override
     public void draw(Graphics graphics) throws Exception {
-        final BufferedImage image = ImageIO.read(new File("src/ressources/avion.png"));
-
-        System.out.println(this.getPosition().getX());
-
-        graphics.drawImage(image, (int) this.getPosition().getX(), (int) this.getPosition().getY(), null);
+        graphics.drawImage(icons.get(0), (int) this.getPosition().getX(), (int) this.getPosition().getY(), null);
     }
 
     public Integer getId() {

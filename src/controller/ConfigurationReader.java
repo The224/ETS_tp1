@@ -56,7 +56,7 @@ public class ConfigurationReader {
             Element productionInterval = (Element) factory.getElementsByTagName("interval-production").item(0);
 
             config.type = factory.getAttribute("type");
-            config.icons = generateIcons(factory.getElementsByTagName("icons"));
+            config.icons = generateIcons(factory.getElementsByTagName("icone"));
             config.productionRequirement = generateInputs(factory.getElementsByTagName("entree"));
 
             if (!factory.getAttribute("type").equals("entrepot")) {
@@ -92,8 +92,8 @@ public class ConfigurationReader {
                             config.icons,
                             config.productionRequirement,
                             new Point2D.Double(
-                                    Double.parseDouble(factory.getAttribute("id")),
-                                    Double.parseDouble(factory.getAttribute("id"))
+                                    Double.parseDouble(factory.getAttribute("x")),
+                                    Double.parseDouble(factory.getAttribute("y"))
                             )
                     ));
                 default:
@@ -105,8 +105,8 @@ public class ConfigurationReader {
                             config.output,
                             config.productionRequirement,
                             new Point2D.Double(
-                                    Double.parseDouble(factory.getAttribute("id")),
-                                    Double.parseDouble(factory.getAttribute("id"))
+                                    Double.parseDouble(factory.getAttribute("x")),
+                                    Double.parseDouble(factory.getAttribute("y"))
                             )
                     ));
             }
@@ -118,6 +118,7 @@ public class ConfigurationReader {
         ArrayList<BufferedImage> icons = new ArrayList<>(iconList.getLength());
         for (int i = 0; i < iconList.getLength(); i++) {
             Element icon = (Element) iconList.item(i);
+            System.out.println(icon.getAttribute("type"));
             switch (icon.getAttribute("type")) {
                 case "vide":
                     icons.add(0, ImageIO.read(new File(icon.getAttribute("path"))));

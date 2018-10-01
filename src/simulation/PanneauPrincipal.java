@@ -20,12 +20,7 @@ public class PanneauPrincipal extends JPanel {
 	@Override
 	public void paint(Graphics g) {
 	    super.paint(g);
-        System.out.println("test");
-
-        System.out.println(this.factoryController.getSimulatedObjects());
-
         this.factoryController.getSimulatedObjects().forEach( ob -> {
-            System.out.println(ob);
             try {
                ob.draw(g);
             } catch (Exception e){

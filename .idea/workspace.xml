@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85b7be5f-7eff-4dbc-8f6c-0c67c4aa7ab6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/ConfigurationReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/building/Building.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/building/BuildingConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/building/Warehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/FactoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/FactoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Building.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/building/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ISimulatedObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ISimulatedObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Road.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Road.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Warehouse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/simulation/Environnement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/Environnement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/simulation/FenetrePrincipale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/FenetrePrincipale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ConfigurationReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ConfigurationReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/building/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/building/Building.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/simulation/PanneauPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/PanneauPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/simulation/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/Simulation.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,26 +24,26 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="classpath" value="1" />
-          <entry key="java" value="50" />
-          <entry key="xml" value="3" />
+          <entry key="java" value="53" />
+          <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Eclipse" value="1" />
-          <entry key="JAVA" value="50" />
-          <entry key="XML" value="3" />
+          <entry key="JAVA" value="53" />
+          <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="8" />
-          <entry key="java" value="4758" />
+          <entry key="java" value="4837" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4758" />
+          <entry key="JAVA" value="4837" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -65,24 +52,36 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/building/Factory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="23" column="61" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/building/Building.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+            <state relative-caret-position="218">
+              <caret line="57" column="58" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2675#2676#0" expanded="true" />
                 <element signature="e#2715#2716#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controller/ConfigurationReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="57" column="55" lean-forward="true" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ressources/configuration.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-110">
+              <caret line="49" column="22" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -99,6 +98,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>11</find>
+      <find>System</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,9 +124,9 @@
         <option value="$PROJECT_DIR$/src/model/building/BuildingConfig.java" />
         <option value="$PROJECT_DIR$/src/simulation/Simulation.java" />
         <option value="$PROJECT_DIR$/src/controller/FactoryController.java" />
+        <option value="$PROJECT_DIR$/src/model/building/Building.java" />
         <option value="$PROJECT_DIR$/src/simulation/PanneauPrincipal.java" />
         <option value="$PROJECT_DIR$/src/controller/ConfigurationReader.java" />
-        <option value="$PROJECT_DIR$/src/model/building/Building.java" />
       </list>
     </option>
   </component>
@@ -187,7 +187,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538364752184" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538365349689" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
@@ -234,15 +234,15 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.123667374" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.123667374" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49946696" weight="0.26898047" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -355,13 +355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ressources/configuration.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="68" column="40" lean-forward="true" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11/lib/src.zip!/java.base/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-199">
@@ -400,13 +393,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/PanneauPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/FactoryController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -416,16 +402,6 @@
             <element signature="e#536#537#0" expanded="true" />
             <element signature="e#975#976#0" expanded="true" />
             <element signature="e#1014#1015#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/ConfigurationReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2024">
-          <caret line="116" column="95" lean-forward="true" selection-start-line="116" selection-start-column="95" selection-end-line="116" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -440,21 +416,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ressources/configuration.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <caret line="49" column="22" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/simulation/PanneauPrincipal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/building/Factory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="176">
           <caret line="23" column="61" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/building/Building.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+        <state relative-caret-position="218">
+          <caret line="57" column="58" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2675#2676#0" expanded="true" />
             <element signature="e#2715#2716#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/ConfigurationReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="57" column="55" lean-forward="true" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
