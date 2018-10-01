@@ -1,6 +1,7 @@
 package model;
 
 import controller.FactoryController;
+import model.building.Building;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -42,7 +43,12 @@ public class Road implements ISimulatedObject {
 
     @Override
     public void draw(Graphics graphics) {
-
+        graphics.setColor(Color.BLACK);
+        graphics.drawLine(
+                (int) this.origin.getPosition().getX(),
+                (int) this.origin.getPosition().getY(),
+                (int) this.destination.getPosition().getX(),
+                (int) this.destination.getPosition().getY());
     }
 
     private void deliver(Shipment shipment) {

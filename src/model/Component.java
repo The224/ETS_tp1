@@ -21,4 +21,18 @@ public enum Component {
         return "";
     }
 
+    public static Component getComponentFromFR(String name) {
+        switch (name){
+            case "metal":
+                return METAL;
+            case "aile":
+                return WING;
+            case "moteur":
+                return MOTOR;
+            case "avion":
+                return PLANE;
+        }
+        return null;
+    }
+
 }

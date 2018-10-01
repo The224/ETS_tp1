@@ -5,5 +5,5 @@ import java.awt.*;
 public interface ISimulatedObject {
 
     void nextTurn();
-    void draw(Graphics graphics);
+    void draw(Graphics graphics) throws Exception;
 }
