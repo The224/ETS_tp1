@@ -22,6 +22,7 @@ public abstract class Building implements ISimulatedObject {
     private HashMap<model.Component, Integer> productionRequirement;
     private HashMap<model.Component, Integer> inventory = new HashMap<>();
     private ArrayList<BufferedImage> icons;
+    private Integer productionTick = 0;
 
     public Building(
             Integer id,
@@ -54,7 +55,13 @@ public abstract class Building implements ISimulatedObject {
 
     @Override
     public void draw(Graphics graphics) throws Exception {
-        graphics.drawImage(icons.get(0), (int) this.getPosition().getX(), (int) this.getPosition().getY(), null);
+        if (productionInterval != null) {
+            Integer index = 4*productionTick/productionInterval;
+            System.out.println(index);
+            graphics.drawImage(icons.get(index), (int) this.getPosition().getX(), (int) this.getPosition().getY(), null);
+        } else {
+            graphics.drawImage(icons.get(0), (int) this.getPosition().getX(), (int) this.getPosition().getY(), null);
+        }
     }
 
     public Integer getId() {
@@ -119,6 +126,14 @@ public abstract class Building implements ISimulatedObject {
 
     public void setIcons(ArrayList<BufferedImage> icons) {
         this.icons = icons;
+    }
+
+    public Integer getProductionTick() {
+        return productionTick;
+    }
+
+    public void setProductionTick(Integer productionTick) {
+        this.productionTick = productionTick;
     }
 
     @Override

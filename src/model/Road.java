@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Road implements ISimulatedObject {
 
@@ -39,9 +40,11 @@ public class Road implements ISimulatedObject {
 
     @Override
     public void nextTurn() {
-        for (Shipment shipment : shipments) {
+        for (Iterator<Shipment> iterator = shipments.iterator(); iterator.hasNext();) {
+            Shipment shipment = iterator.next();
             if(shipment.travel() > this.roadLength) {
                 this.deliver(shipment);
+                iterator.remove();
             }
         }
     }
@@ -66,15 +69,9 @@ public class Road implements ISimulatedObject {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
             shipmentRatio = (int)(100 * shipment.getDistance()/roadLength);
-            shipmentX = (int)(this.destination.getPosition().getX() * shipmentRatio/100 + this.origin.getPosition().getX());
-            shipmentY = (int)(this.destination.getPosition().getY() * shipmentRatio/100 + this.origin.getPosition().getY());
-
-            System.out.println(this.destination.getPosition().getY());
-            System.out.println(this.origin.getPosition().getY());
-            System.out.println(shipmentY);
-
+            shipmentX = (int)((this.destination.getPosition().getX()- this.origin.getPosition().getX()) * shipmentRatio/100 + this.origin.getPosition().getX());
+            shipmentY = (int)((this.destination.getPosition().getY()- this.origin.getPosition().getY())* shipmentRatio/100 + this.origin.getPosition().getY());
             graphics.drawImage(componentImage, shipmentX, shipmentY, null);
         }
     }
@@ -82,7 +79,6 @@ public class Road implements ISimulatedObject {
     private void deliver(Shipment shipment) {
         System.out.println("Road is delivering " + shipment.getComponent());
         this.destination.arrival(shipment);
-        shipments.remove(shipment);
     }
 
     private static Double computeRoadLength(Building origin, Building destination) {

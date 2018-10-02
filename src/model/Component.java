@@ -12,9 +12,9 @@ public enum Component {
             case METAL:
                 return "src/ressources/metal.png";
             case WING:
-                return "src/ressources/wing.png";
+                return "src/ressources/aile.png";
             case MOTOR:
-                return "src/ressources/motor.png";
+                return "src/ressources/moteur.png";
             case PLANE:
                 return "src/ressources/avion.png";
         }

@@ -10,11 +10,12 @@ import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Factory extends Building {
 
     private Boolean isInProduction = false;
-    private Integer productionTick = 0;
+    private Boolean producing = false;
 
     public Factory(
             Integer id,
@@ -28,20 +29,45 @@ public class Factory extends Building {
         FactoryController.isInProduction.subscribe( (isInProduction) -> this.isInProduction = (Boolean)isInProduction);
     }
 
-    public void shipmentReady() {
-        System.out.println("Building " + this.getId() + " has produced " + this.getOutput());
-        FactoryController.sendingDispatcher.emit(new Shipment(this.getId(), null, this.getOutput()));
-    }
-
     @Override
     public void nextTurn() {
-        productionTick++;
-        if (getProductionRequirement().size() == 0 && getProductionInterval().equals(productionTick)) {
-            this.shipmentReady();
-        } else {
+        if (getProductionRequirement().size() == 0) { // Producer Factory
+            setProductionTick(getProductionTick() + 1);
+            if(getProductionInterval().equals(getProductionTick())) {
+                this.shipmentReady();
+                setProductionTick(0);
+            }
+        } else { // Assembly Factory
+            if (producing) {
+                setProductionTick(getProductionTick() + 1);
+                if(getProductionInterval().equals(getProductionTick())) {
+                    this.shipmentReady();
+                    setProductionTick(0);
+                    this.producing = false;
+                }
+            } else {
+                Integer produceNeeds = getProductionRequirement().size();
+                Integer produceReady = 0;
 
+                for(Map.Entry<Component, Integer> entry : getProductionRequirement().entrySet()) {
+                    Component requirement = entry.getKey();
+                    Integer nbRequire = entry.getValue();
+
+                    Integer stock = getInventory().get(requirement);
+                    if (stock != null && nbRequire <= stock) {
+                        produceReady++;
+                    }
+                }
+                if (produceNeeds.equals(produceReady)) {
+                    producing = true;
+                }
+            }
         }
     }
 
+    private void shipmentReady() {
+        System.out.println("Building " + this.getId() + " has produced " + this.getOutput());
+        FactoryController.sendingDispatcher.emit(new Shipment(this.getId(), null, this.getOutput()));
+    }
 
 }

@@ -17,12 +17,12 @@ public class FactoryController {
 
     public FactoryController() {
         changeConfiguration("src/ressources/configuration.xml");
-        sendingDispatcher.emit(new Shipment(11, null, Component.METAL));
     }
 
     public ArrayList<ISimulatedObject> getSimulatedObjects() {
         return simulatedObjects;
     }
+
 
     public boolean changeConfiguration(String configurationPath) {
         try{
@@ -33,10 +33,4 @@ public class FactoryController {
             return false;
         }
     }
-
-    private void resetWithNewValues(ArrayList<ISimulatedObject> simulatedObjects) {
-        // TODO reset the controller
-    }
-
-
 }
